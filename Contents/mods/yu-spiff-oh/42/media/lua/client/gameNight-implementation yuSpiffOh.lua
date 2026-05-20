@@ -1,9 +1,9 @@
 -- TODO: CHANGE FILENAME
 --- CHANGE THIS FILE'S NAME WHERE IT SAYS `ADDON_NAME`
 
-local applyItemDetails = require "gameNight - applyItemDetails"
+local applyItemDetails = require("gameNight-applyItemDetails.lua")
 local deckActionHandler = applyItemDetails.deckActionHandler
-local gamePieceAndBoardHandler = applyItemDetails.gamePieceAndBoardHandler
+local gamePieceHandler = applyItemDetails.gamePieceHandler
 
 local YuSpiffOh = {}
 
@@ -74,7 +74,7 @@ function applyItemDetails.applyCardForYuSpiffOh(item)
             applyItemDetails.applyBoostersToYuSpiffOhCards(item, zombie)
             item:getModData()["gameNight_specialOnCardApplyBooster"] = nil
             item:getModData()["gameNight_specialOnCardApplyDeck"] = nil
-            gamePieceAndBoardHandler.refreshInventory(getPlayer())
+            gamePieceHandler.refreshInventory(getPlayer())
             return
         end
 
@@ -101,7 +101,7 @@ function applyItemDetails.applyCardForYuSpiffOh(item)
             item:getModData()["gameNight_specialOnCardApplyDeck"] = nil
         end
 
-        gamePieceAndBoardHandler.refreshInventory(getPlayer())
+        gamePieceHandler.refreshInventory(getPlayer())
     end
 end
 
@@ -677,6 +677,6 @@ for _,cards in pairs(YuSpiffOh.cardsByRarity) do
 end
 deckActionHandler.addDeck("yuSpiffOhCards", YuSpiffOh.cards)
 
-gamePieceAndBoardHandler.registerSpecial("Base.yuSpiffOhCards", {
+gamePieceHandler.registerSpecial("Base.yuSpiffOhCards", {
     actions = { examine=true}, examineScale = 1, applyCards = "applyCardForYuSpiffOh", textureSize = {100,140}
 })

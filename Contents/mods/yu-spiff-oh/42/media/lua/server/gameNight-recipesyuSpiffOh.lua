@@ -1,5 +1,5 @@
 require "recipecode"
-require "gameNight - recipes"
+require("gameNight-recipes.lua")
 
 function Recipe.GameNight.OpenSealedYuSpiffOhCards(craftRecipeData, character)
     --local item = craftRecipeData:getAllConsumedItems():get(0)

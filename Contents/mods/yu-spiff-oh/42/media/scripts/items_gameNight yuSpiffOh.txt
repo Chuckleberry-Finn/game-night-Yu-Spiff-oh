@@ -1,17 +1,12 @@
 module Base
 {
-    item yuSpiffOhCards
-    {
-        DisplayCategory = Deck, Weight = 0.01, Type = Normal,
-        gameNight_specialOnCardApplyDeck = true,
-        DisplayName = Yu-Spiff-Oh Deck, Icon = yuSpiffOhCards/deck, WorldStaticModel = yuSpiffOh_Card,
+    item yuSpiffOhCards {
+        DisplayCategory = Deck, Weight = 0.01, ItemType = base:normal, gameNight_specialOnCardApplyDeck = true,
+        Icon = yuSpiffOhCards/deck, WorldStaticModel = yuSpiffOh_Card,
     }
 
-    item yuSpiffOhBoosterPack
-    {
-        DisplayName = Yu-Spiff-Oh Booster Pack,
-        DisplayCategory = GameBox, Weight = 0.1, Type = Normal,
+    item yuSpiffOhBoosterPack {
+        DisplayCategory = GameBox, Weight = 0.1, ItemType = base:normal,
         Icon = Boxes/yuSpiffOhBoosterPack, WorldStaticModel = yuSpiffOh_Booster,
-
     }
 }
