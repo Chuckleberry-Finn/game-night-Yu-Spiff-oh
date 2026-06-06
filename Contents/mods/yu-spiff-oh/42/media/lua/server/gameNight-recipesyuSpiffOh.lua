@@ -1,4 +1,3 @@
-require "recipecode"
 require("gameNight-recipes.lua")
 
 function Recipe.GameNight.OpenSealedYuSpiffOhCards(craftRecipeData, character)
